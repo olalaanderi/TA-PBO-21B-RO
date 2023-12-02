@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Belajar Bahasa Inggris SD</title>
+  <style>
+    /* Gaya untuk tampilan halaman */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Tampilan aktif pada link navigasi */
+    nav ul li a.active {
+      color: #ff6600;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Belajar Bahasa Inggris SD</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="homeLink">Beranda</a></li>
+        <li><a href="#" id="lessonsLink">Pelajaran</a></li>
+        <li><a href="#" id="gamesLink">Permainan</a></li>
+        <li><a href="#" id="aboutLink">Tentang Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home">
+      <h2>Selamat Datang di Belajar Bahasa Inggris SD!</h2>
+      <p>Di sini, Anda bisa belajar bahasa Inggris dengan cara yang menyenangkan.</p>
+      
+
+    </section>
     
+    <section id="lessons" style="display: none;">
+      <h2>Pelajaran</h2>
+      <!-- Konten pelajaran bisa ditambahkan di sini -->
+    </section>
+    
+    <section id="games" style="display: none;">
+      <h2>Permainan</h2>
+      <!-- Konten permainan bisa ditambahkan di sini -->
+    </section>
+    
+    <section id="about" style="display: none;">
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah tim yang berdedikasi untuk membantu anak-anak belajar bahasa Inggris dengan cara yang menyenangkan.</p>
+    </section>
+  </main>
+
+  <script>
+    // Ambil elemen-elemen yang diperlukan
+    const homeLink = document.getElementById('homeLink');
+    const lessonsLink = document.getElementById('lessonsLink');
+    const gamesLink = document.getElementById('gamesLink');
+    const aboutLink = document.getElementById('aboutLink');
+
+    const homeSection = document.getElementById('home');
+    const lessonsSection = document.getElementById('lessons');
+    const gamesSection = document.getElementById('games');
+    const aboutSection = document.getElementById('about');
+
+    // Fungsi untuk menampilkan section yang dipilih dan menyembunyikan yang lainnya
+    function showSection(section) {
+      homeSection.style.display = 'none';
+      lessonsSection.style.display = 'none';
+      gamesSection.style.display = 'none';
+      aboutSection.style.display = 'none';
+
+      section.style.display = 'block';
+    }
+
+    // Event listener untuk setiap link navigasi
+    homeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      showSection(homeSection);
+      homeLink.classList.add('active');
+      lessonsLink.classList.remove('active');
+      gamesLink.classList.remove('active');
+      aboutLink.classList.remove('active');
+    });
+
+    lessonsLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      showSection(lessonsSection);
+      homeLink.classList.remove('active');
+      lessonsLink.classList.add('active');
+      gamesLink.classList.remove('active');
+      aboutLink.classList.remove('active');
+    });
+
+    gamesLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      showSection(gamesSection);
+      homeLink.classList.remove('active');
+      lessonsLink.classList.remove('active');
+      gamesLink.classList.add('active');
+      aboutLink.classList.remove('active');
+    });
+
+    aboutLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      showSection(aboutSection);
+      homeLink.classList.remove('active');
+      lessonsLink.classList.remove('active');
+      gamesLink.classList.remove('active');
+      aboutLink.classList.add('active');
+    });
+
+    // Tampilkan section home secara default
+    showSection(homeSection);
+    homeLink.classList.add('active');
+  </script>
 </body>
 </html>
