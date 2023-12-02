@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    /* CSS untuk latar belakang */
+    body {
+      background-image: url('namafile-gambar.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* Ganti 'namafile-gambar.jpg' dengan URL/path gambar Anda */
+    }
+
+    /* CSS untuk form login */
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    /* desktop first technique */
+        /* tablet PC */
+        @media(max-width: 768px)
+        {
+            body
+            {
+                background-color:chartreuse;
+            }
+        }
+        /* handphone */
+        @media(max-width: 450px)
+        {body
+            {
+                background-color:violet;
+            }
+        }
+        @media(max-width: 320px)
+        {body
+            {
+                background-color:crimson;
+            }
+        }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Form Login</h2>
+    <form>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="button" value="Login" onclick="validateLogin()">
+    </form>
+  </div>
+
+  <script>
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Lakukan validasi sesuai kebutuhan Anda
+      if (username === "user123" && password === "password123") {
+        alert("Login berhasil!");
+        // Lakukan aksi setelah login berhasil
+        // Contoh: window.location.href = "halaman_beranda.html";
+      } else {
+        alert("Username atau password salah. Coba lagi.");
+      }
+    }
+  </script>
+</body>
+</html>
