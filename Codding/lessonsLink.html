@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Belajar Bahasa Inggris SD</title>
+  
+   <!-- internal CSS -->
   <style>
-    /* Gaya untuk tampilan halaman */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: whitesmoke;
     }
 
     header {
+      background-image: url('ft3.jpg');
+     opacity : 0.7;
       background-color: #f2f2f2;
-      padding: 20px;
+      padding: 100px;
       text-align: center;
     }
 
@@ -21,6 +25,7 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
+      color: black;
     }
 
     nav ul li {
@@ -30,7 +35,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #333;
+      color: black;
       font-weight: bold;
     }
 
@@ -38,15 +43,21 @@
       padding: 20px;
     }
 
+    h1 {
+
+     text-align: center;
+    }
+
     /* Tampilan aktif pada link navigasi */
     nav ul li a.active {
-      color: #ff6600;
+      color: plum;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Belajar Bahasa Inggris SD</h1>
+  <header >
+    <h1 style="color: black; font-weight: bold;" >Belajar Bahasa Inggris Sekolah Dasar</h1>
     <nav>
       <ul>
         <li><a href="#" id="homeLink">Beranda</a></li>
@@ -59,14 +70,50 @@
   
   <main>
     <section id="home">
-      <h2>Selamat Datang di Belajar Bahasa Inggris SD!</h2>
+      <h2>Selamat Datang di Belajar Bahasa Inggris Sekolah Dasar!</h2>
       <p>Di sini, Anda bisa belajar bahasa Inggris dengan cara yang menyenangkan.</p>
       
 
     </section>
     
     <section id="lessons" style="display: none;">
-      <h2>Pelajaran</h2>
+      <h1>PELAJARAN</h1>
+      <section id="lessons">
+        <article class="lesson" style="background-color: plum;">
+            <h2>Pengenalan Bahasa Inggris</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang Greeting</p>
+            <a href="https://www.youtube.com/watch?v=FrwfbVEwqZg" target="_blank" >Tonton Video Pembelajaran Berikut</a>
+        </article>
+    
+        <article class="lesson" style="background-color: pink;">
+            <h2>Classroom</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang Ruang Kelas. </p>
+            <a href="https://www.youtube.com/watch?v=ypqsBk7CL7M&list=PLGfmQAXebeS6ghPxSX0A1oTUpW7qEnaBR&index=2" target="_blank" >Tonton Video Pembelajaran Berikut</a>       
+         </article>
+
+         <article class="lesson" style="background-color: cornflowerblue;">
+            <h2>My Face</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang kalimat come from dan comes from. </p>
+            <a href="https://youtu.be/yWVor0NmlaI?si=OBZQA62sOVPhKzcs" target="_blank" >Tonton Video Pembelajaran Berikut</a>       
+         </article>
+
+         <article class="lesson" style="background-color: plum;">
+            <h2>My Familyy</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang Keluarga</p>
+            <a href="https://youtu.be/MIzhDUS9NOE?si=RqgTSn5VeUlzPrmt" target="_blank" >Tonton Video Pembelajaran Berikut</a>
+        </article>
+    
+        <article class="lesson" style="background-color: pink;">
+            <h2>House</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang Rumah. </p>
+            <a href="https://youtu.be/QRyHDU7PqEA?si=VHNw82EqajW7bNPD" target="_blank" >Tonton Video Pembelajaran Berikut</a>       
+         </article>
+
+         <article class="lesson" style="background-color: cornflowerblue;">
+            <h2>My Pets</h2>
+            <p>Belajar Bahasa Inggris Kelas 1 - tentang binatang peliharaan. </p>
+            <a href="https://youtu.be/Qbn1uQNCtjc?si=I8mV8J1PQfjI71u7" target="_blank" >Tonton Video Pembelajaran Berikut</a>       
+         </article>
       <!-- Konten pelajaran bisa ditambahkan di sini -->
     </section>
     
@@ -141,8 +188,8 @@
     });
 
     // Tampilkan section home secara default
-    showSection(homeSection);
-    homeLink.classList.add('active');
+    showSection(lessonsSection);
+    lessonsLink.classList.add('active');
   </script>
 </body>
 </html>
