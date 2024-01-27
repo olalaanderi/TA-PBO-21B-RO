@@ -19,6 +19,7 @@
       background-color: #f2f2f2;
       padding: 100px;
       text-align: center;
+      image-resolution: url('Cat.jpg');
     }
 
     nav ul {
@@ -99,11 +100,26 @@
       <p id="tenseResult"></p>
 
       <h3>Kuis Gambar</h3>
-      <img src="cat.jpg" alt="Gambar Kucing">
+      <img src="cat.jpg" alt="Gambar Kucing"style="max-width: 20%;">
       <p id="imageQuestion">Apa nama hewan pada gambar di atas?</p>
       <input type="text" id="imageAnswer" placeholder="Masukkan jawaban">
       <button onclick="cekImage()">Cek Jawaban</button>
       <p id="imageResult"></p>
+
+     <!-- Permainan baru: Tebak Kata -->
+     <h3>Permainan Tebak Kata</h3>
+     <p id="wordGuessQuestion">Tebak kata berikut: _ _ _ _ _ (Buah yang berwarna merah dan memiliki biji di dalam)</p>
+     <input type="text" id="wordGuessAnswer" placeholder="Masukkan jawaban">
+     <button onclick="cekWordGuess()">Cek Jawaban</button>
+     <p id="wordGuessResult"></p>
+
+     <!-- Permainan baru: Cari Kata -->
+     <h3>Permainan Cari Kata</h3>
+     <p id="wordSearchQuestion">Cari kata 'QUIZ' dalam gambar berikut:</p>
+     <img src="Puzzle1.jpg" alt="Word Search Puzzle" style="max-width: 20%;">
+     <input type="text" id="wordSearchAnswer" placeholder="Masukkan posisi (baris, kolom)">
+     <button onclick="cekWordSearch()">Cek Jawaban</button>
+     <p id="wordSearchResult"></p>
     </section>
     
     <section id="about" style="display: none;">
